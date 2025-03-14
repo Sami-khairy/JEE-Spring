@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.example</groupId>
-    <artifactId>activite1</artifactId>
+    <artifactId>IOC et DI (java)</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
