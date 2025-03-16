@@ -7,7 +7,7 @@ import ma.khairy.metier.MetierImpl;
 public class presentationV1 {
     public static void main(String[] args) {
         /**
-         * injection de deps par instanciation statique
+         * injection de deps par instanciation statique --> new ...()
          */
         DaoImplV2 dao = new DaoImplV2();
         MetierImpl metier = new MetierImpl(dao); //injection via le constructeur
