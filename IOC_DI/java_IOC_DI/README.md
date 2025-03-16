@@ -3,6 +3,10 @@
 ## Introduction
 Ce projet démontre les principes d'Inversion de Contrôle (IoC) et d'Injection de Dépendances (DI) en Java, deux concepts fondamentaux pour développer des applications modulaires et maintenables.
 
+## Diagramme de classes
+
+<img src="src/main/resources/java.PNG">
+
 ## Explication des concepts
 
 ### Inversion de Contrôle (IoC)
