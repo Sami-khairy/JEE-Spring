@@ -1,16 +1,18 @@
 package ma.khairy.metier;
 
 import ma.khairy.dao.IDao;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
 
+@Component("metier")
 public class MetierImpl implements IMetier {
     //couplage faible
+//    @Autowired
     private IDao dao;
 
-    public MetierImpl(IDao dao) {
+    public MetierImpl(@Qualifier("dao") IDao dao) {
         this.dao = dao;
-    }
-
-    public MetierImpl() {
     }
 
     @Override
