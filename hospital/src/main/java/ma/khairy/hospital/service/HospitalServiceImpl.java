@@ -9,8 +9,10 @@ import ma.khairy.hospital.repository.MedecinRepo;
 import ma.khairy.hospital.repository.PatientRepo;
 import ma.khairy.hospital.repository.RendezVousRepo;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
+@Transactional
 public class HospitalServiceImpl implements IHospitalService {
 
     private PatientRepo patientRepo;

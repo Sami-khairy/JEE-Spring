@@ -1,5 +1,6 @@
 package ma.khairy.hospital.entity;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 
 import java.util.Date;
@@ -15,6 +16,7 @@ public class RendezVous {
     private StatusRDV status;
 
     @ManyToOne
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private Patient patient;
     @ManyToOne
     private Medecin medecin;
