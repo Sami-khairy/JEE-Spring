@@ -1,0 +1,26 @@
+package ma.khairy.hopital.web;
+
+import ma.khairy.hopital.entities.Patient;
+import ma.khairy.hopital.repository.PatientRepository;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import java.util.List;
+
+@Controller
+public class PatientController {
+    private PatientRepository patientRepository;
+
+    public PatientController(PatientRepository patientRepository) {
+        this.patientRepository = patientRepository;
+    }
+
+
+    @GetMapping("/index")
+    public String index(Model model) {
+        List<Patient> patients = patientRepository.findAll();
+        model.addAttribute("patients", patients);
+        return "patients";
+    }
+}
