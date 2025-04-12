@@ -22,11 +22,11 @@ public class HopitalApplication {
                     .name("khairy")
                     .dateNaissance(new Date())
                     .malade(false)
-                    .scope(100)
+                    .score(100)
                     .build();
             patientRepository.save(patient);
-            patientRepository.save(Patient.builder().name("mohamed").dateNaissance(new Date()).malade(true).scope(70).build());
-            patientRepository.save(Patient.builder().name("imane").dateNaissance(new Date()).malade(true).scope(120).build());
+            patientRepository.save(Patient.builder().name("mohamed").dateNaissance(new Date()).malade(true).score(70).build());
+            patientRepository.save(Patient.builder().name("imane").dateNaissance(new Date()).malade(true).score(120).build());
 
             patientRepository.findAll().forEach(System.out::println);
         };
