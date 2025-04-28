@@ -17,7 +17,7 @@ public class HopitalApplication {
     public static void main(String[] args) {
         SpringApplication.run(HopitalApplication.class, args);
     }
-//    @Bean
+    @Bean
     CommandLineRunner commandLineRunner(PatientRepository patientRepository) {
         return args -> {
             Patient patient = Patient.builder()

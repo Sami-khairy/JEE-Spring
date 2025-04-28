@@ -27,11 +27,16 @@
             </ul>
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        UserName
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" th:text="${#authentication.name}">
+                        <i class="bi bi-person-circle"></i>
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Logout</a></li>
+<!--                        <li><a class="dropdown-item" th:href="@{/logout}">Logout</a></li>-->
+                        <li>
+                            <form method="post" th:action="@{/logout}">
+                                <button type="submit" class="dropdown-item">Logout</button>
+                            </form>
+                        </li>
                     </ul>
                 </li>
             </ul>
