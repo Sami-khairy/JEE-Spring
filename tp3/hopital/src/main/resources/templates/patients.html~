@@ -51,7 +51,7 @@
                                     <i class="bi bi-trash"></i>
                                 </a>
                             </td>
-                            <td th:if="${#authorization.expression('hasRole(''ADMIN'')')}">
+                            <td>
                                 <a th:href="@{/admin/editPatient(id=${patient.id}, keyword=${keyword}, page=${currentPage})}"
                                    class="btn btn-success">
                                     <i class="bi bi-pencil"></i>

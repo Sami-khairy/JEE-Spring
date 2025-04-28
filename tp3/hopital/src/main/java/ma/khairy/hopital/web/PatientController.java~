@@ -72,6 +72,6 @@ public class PatientController {
         model.addAttribute("patient",patient);
         model.addAttribute("currentPage", page);
         model.addAttribute("keyword",keyword);
-        return "editPatient";
+        return "admin/editPatient";
     }
 }

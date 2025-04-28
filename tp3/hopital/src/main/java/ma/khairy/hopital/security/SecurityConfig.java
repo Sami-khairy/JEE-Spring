@@ -33,11 +33,18 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
         return httpSecurity
-                .formLogin(Customizer.withDefaults())
+//                .formLogin(Customizer.withDefaults())
+                .formLogin().loginPage("/login").permitAll()
+                .and()
+                .rememberMe()
+                .and()
+                .authorizeHttpRequests(ar->ar.requestMatchers("/webjars/**").permitAll())
                 .authorizeHttpRequests(ar->ar.requestMatchers("/deletePatient/**").hasRole("ADMIN"))
                 .authorizeHttpRequests(ar->ar.requestMatchers("/admin/**").hasRole("ADMIN"))
                 .authorizeHttpRequests(ar->ar.requestMatchers("/user/**").hasRole("USER"))
                 .authorizeHttpRequests(ar->ar.anyRequest().authenticated())
+                .exceptionHandling().accessDeniedPage("/notAuthorized")
+                .and()
                 .build();
     }
 }

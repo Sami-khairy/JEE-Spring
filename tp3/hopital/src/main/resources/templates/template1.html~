@@ -18,7 +18,7 @@
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" th:href="@{/user/index}">Home</a>
                 </li>
-                <li th:if="${#authorization.expression('hasRole(''ADMIN'')')}" class="nav-item">
+                <li class="nav-item">
                     <a class="nav-link" th:href="@{/admin/formPatients}">Nouveau</a>
                 </li>
                 <li class="nav-item">
